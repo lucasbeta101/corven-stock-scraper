@@ -1,0 +1,22 @@
+services:
+  # API REST Service
+  - type: web
+    name: corven-stock-api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python api.py"
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: MONGODB_URI
+        value: mongodb+srv://lucasbeta101:rEeTjUzGt9boy4Zy@bether.qxglnnl.mongodb.net/autopartes
+    
+  # Background Worker for Scraping
+  - type: worker
+    name: corven-stock-scraper
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python scheduler.py"
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://lucasbeta101:rEeTjUzGt9boy4Zy@bether.qxglnnl.mongodb.net/autopartes
