@@ -8,33 +8,13 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-    
-    - name: Set up Python
-      uses: actions/setup-python@v4
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v4
       with:
         python-version: '3.11'
-    
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y wget gnupg unzip curl google-chrome-stable
-    
-    - name: Install ChromeDriver
-      run: |
-        CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
-        wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
-        sudo unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
-        sudo chmod +x /usr/local/bin/chromedriver
-    
-    - name: Install Python packages
-      run: |
-        pip install -r requirements.txt
-    
-    - name: Run scraper
+    - run: sudo apt-get update && sudo apt-get install -y google-chrome-stable
+    - run: pip install -r requirements.txt
+    - run: python scraper.py
       env:
         MONGODB_URI: ${{ secrets.MONGODB_URI }}
-      run: python scraper.py
