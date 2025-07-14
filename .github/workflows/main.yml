@@ -2,7 +2,7 @@ name: Daily Stock Scraper
 
 on:
   schedule:
-    - cron: '0 9 * * 1-5'  # Lunes a Sábado, NO domingos
+    - cron: '0 9 * * 1-6'  # Lunes a Sábado, NO domingos
   workflow_dispatch:
 
 jobs:
@@ -18,35 +18,15 @@ jobs:
       with:
         python-version: '3.11'
     
-    - name: Install system dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y wget gnupg unzip curl
+    - name: Install Chrome and ChromeDriver
+      uses: browser-actions/setup-chrome@v1
+      with:
+        chrome-version: stable
     
-    - name: Install Chrome and ChromeDriver (compatible versions)
+    - name: Verify Chrome installation
       run: |
-        # Install Chrome
-        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
-        
-        # Get Chrome version and install matching ChromeDriver
-        CHROME_VERSION=$(google-chrome --version | cut -d ' ' -f3 | cut -d '.' -f1-3)
-        echo "Chrome version: $CHROME_VERSION"
-        
-        # Get compatible ChromeDriver version
-        CHROMEDRIVER_VERSION=$(curl -sS "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
-        echo "ChromeDriver version: $CHROMEDRIVER_VERSION"
-        
-        # Download and install ChromeDriver
-        wget -O /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
-        sudo unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
-        sudo chmod +x /usr/local/bin/chromedriver
-        
-        # Verify versions
-        echo "Installed Chrome: $(google-chrome --version)"
-        echo "Installed ChromeDriver: $(chromedriver --version)"
+        echo "Chrome version: $(google-chrome --version)"
+        echo "ChromeDriver version: $(chromedriver --version)"
     
     - name: Install Python packages
       run: |
