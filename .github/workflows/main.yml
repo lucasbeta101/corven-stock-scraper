@@ -2,7 +2,7 @@ name: Daily Stock Scraper
 
 on:
   schedule:
-    - cron: '0 9 * * 1-5'  # Lunes a Sábado, NO domingos
+    - cron: '0 9 * * 1-4'  # Lunes a Sábado, NO domingos
   workflow_dispatch:
 
 jobs:
