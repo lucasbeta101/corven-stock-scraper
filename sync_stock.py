@@ -2,7 +2,6 @@
 """
 Script para sincronizar stock desde products_corven hacia productos
 """
-
 import pymongo
 import os
 from datetime import datetime
@@ -31,7 +30,7 @@ def sync_stock():
         logger.info("=== INICIANDO SINCRONIZACIÓN DE STOCK ===")
         
         # Obtener todos los productos de la base principal
-        productos = list(productos_collection.find({}, {"codigo": 1}))
+        productos = list(productos_collection.find({}, {"codigo": 1, "proveedor": 1}))
         logger.info(f"Productos en base principal: {len(productos)}")
         
         # Crear diccionario de stock de Corven {codigo: stock_status}
@@ -47,11 +46,12 @@ def sync_stock():
         # Contadores para reporte
         actualizados = 0
         sin_stock = 0
-        no_encontrados = 0
+        marrose_omitidos = 0
         
         # Sincronizar cada producto
         for producto in productos:
             codigo = producto['codigo']
+            proveedor = producto.get('proveedor', '').lower()
             
             # Buscar stock en datos de Corven
             if codigo in stock_data:
@@ -71,31 +71,39 @@ def sync_stock():
                     logger.info(f"Actualizados: {actualizados} productos...")
                     
             else:
-                # Producto NO encontrado en Corven - marcar sin stock
-                productos_collection.update_one(
-                    {"codigo": codigo},
-                    {"$set": {
-                        "stock_status": "Sin stock",
-                        "stock_updated_at": datetime.now()
-                    }}
-                )
-                sin_stock += 1
+                # Producto NO encontrado en Corven
+                # Si es de Marrose, NO marcar como "Sin stock"
+                if proveedor == "marrose":
+                    marrose_omitidos += 1
+                    logger.debug(f"⏭️  Omitiendo producto Marrose: {codigo}")
+                else:
+                    # Para otros proveedores, marcar sin stock
+                    productos_collection.update_one(
+                        {"codigo": codigo},
+                        {"$set": {
+                            "stock_status": "Sin stock",
+                            "stock_updated_at": datetime.now()
+                        }}
+                    )
+                    sin_stock += 1
         
         # Reporte final
         logger.info("=== SINCRONIZACIÓN COMPLETADA ===")
         logger.info(f"✅ Productos actualizados con stock: {actualizados}")
         logger.info(f"📉 Productos marcados 'Sin stock': {sin_stock}")
-        logger.info(f"📊 Total procesados: {actualizados + sin_stock}")
+        logger.info(f"🏪 Productos Marrose omitidos: {marrose_omitidos}")
+        logger.info(f"📊 Total procesados: {actualizados + sin_stock + marrose_omitidos}")
         
         # Verificar algunos ejemplos
         logger.info("\n=== VERIFICACIÓN DE EJEMPLOS ===")
         ejemplos = productos_collection.find(
             {"stock_status": {"$exists": True}}, 
-            {"codigo": 1, "nombre": 1, "stock_status": 1}
+            {"codigo": 1, "nombre": 1, "stock_status": 1, "proveedor": 1}
         ).limit(5)
         
         for ejemplo in ejemplos:
-            logger.info(f"📦 {ejemplo['codigo']}: {ejemplo['stock_status']}")
+            proveedor_info = ejemplo.get('proveedor', 'N/A')
+            logger.info(f"📦 {ejemplo['codigo']} ({proveedor_info}): {ejemplo['stock_status']}")
         
         client.close()
         logger.info("✅ Sincronización exitosa")
