@@ -47,6 +47,7 @@ def sync_stock():
         actualizados = 0
         sin_stock = 0
         marrose_omitidos = 0
+        yokomitsu_omitidos = 0
         
         # Sincronizar cada producto
         for producto in productos:
@@ -72,10 +73,13 @@ def sync_stock():
                     
             else:
                 # Producto NO encontrado en Corven
-                # Si es de Marrose, NO marcar como "Sin stock"
+                # Si es de Marrose o Yokomitsu, NO marcar como "Sin stock"
                 if proveedor == "marrose":
                     marrose_omitidos += 1
                     logger.debug(f"⏭️  Omitiendo producto Marrose: {codigo}")
+                elif proveedor == "yokomitsu":
+                    yokomitsu_omitidos += 1
+                    logger.debug(f"⏭️  Omitiendo producto Yokomitsu: {codigo}")
                 else:
                     # Para otros proveedores, marcar sin stock
                     productos_collection.update_one(
@@ -92,7 +96,8 @@ def sync_stock():
         logger.info(f"✅ Productos actualizados con stock: {actualizados}")
         logger.info(f"📉 Productos marcados 'Sin stock': {sin_stock}")
         logger.info(f"🏪 Productos Marrose omitidos: {marrose_omitidos}")
-        logger.info(f"📊 Total procesados: {actualizados + sin_stock + marrose_omitidos}")
+        logger.info(f"🚗 Productos Yokomitsu omitidos: {yokomitsu_omitidos}")
+        logger.info(f"📊 Total procesados: {actualizados + sin_stock + marrose_omitidos + yokomitsu_omitidos}")
         
         # Verificar algunos ejemplos
         logger.info("\n=== VERIFICACIÓN DE EJEMPLOS ===")
