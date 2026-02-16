@@ -1,0 +1,43 @@
+name: Daily Stock Scraper
+
+on:
+  schedule:
+    - cron: '0 9 * * 1-4'  # Lunes a Sábado, NO domingos
+  workflow_dispatch:
+
+jobs:
+  scrape-and-sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install Chrome and ChromeDriver
+      uses: browser-actions/setup-chrome@v1
+      with:
+        chrome-version: stable
+    
+    - name: Verify Chrome installation
+      run: |
+        echo "Chrome version: $(google-chrome --version)"
+        echo "ChromeDriver version: $(chromedriver --version)"
+    
+    - name: Install Python packages
+      run: |
+        pip install -r requirements.txt
+    
+    - name: Run scraper
+      env:
+        MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      run: python scraper.py
+    
+    - name: Sync stock to main database
+      env:
+        MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      run: python sync_stock.py
