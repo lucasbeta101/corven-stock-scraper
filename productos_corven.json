@@ -1,0 +1,272 @@
+[
+  {
+    "code": "22181",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del. Peugeot 404 / 504 (../81)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.506315",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22185",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del. Peugeot 504 / 505 (82/86)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.506544",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22189",
+    "stock_status": "Stock bajo",
+    "stock_level": "low",
+    "name": "Del. Peugeot Pick Up 504 (81/86)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.506731",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22191",
+    "stock_status": "Sin stock",
+    "stock_level": "out_of_stock",
+    "name": "Del. Peugeot Pick Up 504 (86/93)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.506911",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22192",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del. Peugeot Pick Up 504 (93/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.507082",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22195",
+    "stock_status": "Stock bajo",
+    "stock_level": "low",
+    "name": "Del. Dodge 1500 (71/78)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.507305",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22197",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del. Dodge 1500 / 1500 1.8",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.507473",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22208",
+    "stock_status": "Stock bajo",
+    "stock_level": "low",
+    "name": "Del. VW Gacel / Gol / Senda / Saveiro",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.507656",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22211",
+    "stock_status": "Stock bajo",
+    "stock_level": "low",
+    "name": "Del. VW Carat (87/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.507844",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22293",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del.Peugeot 504 Nafta/505 Nafta(89/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.508016",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22299",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del. Fiat Strada (99/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.508185",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22313",
+    "stock_status": "Sin stock",
+    "stock_level": "out_of_stock",
+    "name": "Del. Kadett (91/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.508374",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22316",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del.Peugeot 106(94/..)/Citroen AX (91/.)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.508577",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22328",
+    "stock_status": "Sin stock",
+    "stock_level": "out_of_stock",
+    "name": "Del. Fiat Tempra 8v (5-94/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.508748",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22329",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Tras. Fiat Tempra 8v (5-94/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.508914",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "22389",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del. Daewoo Espero (92/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.509085",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "23002",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del.Renault Trafic(Csula Larga)(86/..)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.509277",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "23003",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del. Renault Trafic (Cap. Corta) (86/..)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.509626",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34011",
+    "stock_status": "Stock medio",
+    "stock_level": "medium",
+    "name": "Del. Izquierdo Suzuki Vitara (89/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.509873",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34043",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del. Ford Sierra L/Ghia/Rural(84/5-86)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.510055",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34045",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del.Ford Sierra GL/Ghia S/Rural(6-86/..)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.510226",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34047",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del. Ford Escort (88/95)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.510398",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34048",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Tras.Ford Escort(88/95)/Escort XR3(88/95",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.510572",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34120",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del. Derecho Suzuki Grand Vitara(98/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.510734",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34121",
+    "stock_status": "Sin stock",
+    "stock_level": "out_of_stock",
+    "name": "Del.Izquierdo Suzuki Grand Vitara(98/..)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.510897",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34134",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del. Renault 9 / Renault 11 (85/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.511065",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34146",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Del.Fiat 128/Europa/Super Europa(74/...)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.511228",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34147",
+    "stock_status": "Stock alto",
+    "stock_level": "available",
+    "name": "Tras.Fiat 128/Europa/Super Europa(74/..)",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.511404",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34148",
+    "stock_status": "Stock bajo",
+    "stock_level": "low",
+    "name": "Del.Fiat 147/Spazio/Vivace/Br/Fiorino",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.511836",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  },
+  {
+    "code": "34149",
+    "stock_status": "Sin stock",
+    "stock_level": "out_of_stock",
+    "name": "Tras. Fiat 147 / Vivace / Brio",
+    "brand": "CORVEN",
+    "scraped_at": "2026-11-11T21:06:22.512051",
+    "page_url": "https://e-commerce.corven.com.ar/products"
+  }
+]

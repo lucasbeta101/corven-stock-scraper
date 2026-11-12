@@ -46,6 +46,7 @@ def sync_stock():
         # Contadores para reporte
         actualizados = 0
         sin_stock = 0
+        consultar_stock = 0
         marrose_omitidos = 0
         yokomitsu_omitidos = 0
         
@@ -81,23 +82,24 @@ def sync_stock():
                     yokomitsu_omitidos += 1
                     logger.debug(f"⏭️  Omitiendo producto Yokomitsu: {codigo}")
                 else:
-                    # Para otros proveedores, marcar sin stock
+                    # Para otros proveedores, marcar consultar stock
                     productos_collection.update_one(
                         {"codigo": codigo},
                         {"$set": {
-                            "stock_status": "Sin stock",
+                            "stock_status": "Consultar stock",
+                            "stock_level": "consult",
                             "stock_updated_at": datetime.now()
                         }}
                     )
-                    sin_stock += 1
+                    consultar_stock += 1
         
         # Reporte final
         logger.info("=== SINCRONIZACIÓN COMPLETADA ===")
         logger.info(f"✅ Productos actualizados con stock: {actualizados}")
-        logger.info(f"📉 Productos marcados 'Sin stock': {sin_stock}")
+        logger.info(f"❔ Productos marcados 'Consultar stock': {consultar_stock}")
         logger.info(f"🏪 Productos Marrose omitidos: {marrose_omitidos}")
         logger.info(f"🚗 Productos Yokomitsu omitidos: {yokomitsu_omitidos}")
-        logger.info(f"📊 Total procesados: {actualizados + sin_stock + marrose_omitidos + yokomitsu_omitidos}")
+        logger.info(f"📊 Total procesados: {actualizados + consultar_stock + marrose_omitidos + yokomitsu_omitidos}")
         
         # Verificar algunos ejemplos
         logger.info("\n=== VERIFICACIÓN DE EJEMPLOS ===")

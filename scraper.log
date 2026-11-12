@@ -1,0 +1,105 @@
+2026-11-11 20:57:07,784 - INFO - Iniciando proceso de login...
+2026-11-11 20:57:17,419 - ERROR - Error en login: Message: session not created: This version of ChromeDriver only supports Chrome version 151
+Current browser version is 157.0.8103.78 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6ba6eabb5+151b5]
+	chromedriver!GetHandleVerifier [0x7ff6ba6eac10+15210]
+	chromedriver!(No symbol) [0x7ff6ba215d6d]
+	chromedriver!(No symbol) [0x7ff6ba26015d]
+	chromedriver!(No symbol) [0x7ff6ba25eeb5]
+	chromedriver!(No symbol) [0x7ff6ba2591b7]
+	chromedriver!(No symbol) [0x7ff6ba253e4f]
+	chromedriver!(No symbol) [0x7ff6ba2a7e81]
+	chromedriver!(No symbol) [0x7ff6ba2a76e6]
+	chromedriver!(No symbol) [0x7ff6ba2637cc]
+	chromedriver!(No symbol) [0x7ff6ba2646f3]
+	chromedriver!GetHandleVerifier [0x7ff6bad0b79b+635d9b]
+	chromedriver!GetHandleVerifier [0x7ff6bad05ac6+6300c6]
+	chromedriver!GetHandleVerifier [0x7ff6bad2bcee+6562ee]
+	chromedriver!GetHandleVerifier [0x7ff6ba708ffe+335fe]
+	chromedriver!GetHandleVerifier [0x7ff6ba71147c+3ba7c]
+	chromedriver!GetHandleVerifier [0x7ff6ba6f4d64+1f364]
+	chromedriver!GetHandleVerifier [0x7ff6ba6f4ef4+1f4f4]
+	chromedriver!GetHandleVerifier [0x7ff6ba6d7d97+2397]
+	KERNEL32!BaseThreadInitThunk [0x7ffffc22e957+17]
+	ntdll!RtlUserThreadStart [0x7ffffe0ead6c+2c]
+
+2026-11-11 20:59:50,994 - INFO - Iniciando proceso de login...
+2026-11-11 20:59:50,995 - INFO - ====== WebDriver manager ======
+2026-11-11 20:59:54,497 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 20:59:54,871 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 20:59:55,221 - INFO - There is no [win64] chromedriver "157.0.8103.78" for browser google-chrome "157.0.8103" in cache
+2026-11-11 20:59:55,222 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 20:59:56,100 - INFO - WebDriver version 157.0.8103.78 selected
+2026-11-11 20:59:56,110 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/157.0.8103.78/win32/chromedriver-win32.zip
+2026-11-11 20:59:56,110 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/157.0.8103.78/win32/chromedriver-win32.zip
+2026-11-11 20:59:56,505 - INFO - Driver downloading response is 200
+2026-11-11 20:59:56,969 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 20:59:57,468 - INFO - Driver has been saved in cache [C:\Users\Admin\.wdm\drivers\chromedriver\win64\157.0.8103.78]
+2026-11-11 21:00:04,943 - INFO - Login exitoso
+2026-11-11 21:00:07,000 - INFO - Scrapeando página 1: https://e-commerce.corven.com.ar/products?page=1
+2026-11-11 21:00:09,336 - INFO - Extraídos 30 productos de la página 1
+2026-11-11 21:03:54,077 - INFO - === INICIANDO SCRAPING DIARIO ===
+2026-11-11 21:03:54,078 - INFO - Iniciando proceso de login...
+2026-11-11 21:03:54,078 - INFO - ====== WebDriver manager ======
+2026-11-11 21:03:57,919 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 21:03:58,344 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 21:03:58,728 - INFO - Driver [C:\Users\Admin\.wdm\drivers\chromedriver\win64\157.0.8103.78\chromedriver-win32/chromedriver.exe] found in cache
+2026-11-11 21:04:02,162 - INFO - Login exitoso
+2026-11-11 21:04:02,162 - INFO - Detectando última página disponible...
+2026-11-11 21:04:07,802 - INFO - Última página detectada: 254
+2026-11-11 21:04:07,803 - INFO - Scrapeando página 1: https://e-commerce.corven.com.ar/products?page=1
+2026-11-11 21:04:10,260 - INFO - Extraídos 30 productos de la página 1
+2026-11-11 21:04:10,761 - INFO - Scrapeando página 2: https://e-commerce.corven.com.ar/products?page=2
+2026-11-11 21:04:14,045 - INFO - Extraídos 30 productos de la página 2
+2026-11-11 21:04:14,546 - INFO - Scrapeando página 3: https://e-commerce.corven.com.ar/products?page=3
+2026-11-11 21:04:17,542 - INFO - Extraídos 30 productos de la página 3
+2026-11-11 21:04:18,043 - INFO - Scrapeando página 4: https://e-commerce.corven.com.ar/products?page=4
+2026-11-11 21:04:21,122 - INFO - Extraídos 30 productos de la página 4
+2026-11-11 21:04:21,623 - INFO - Scrapeando página 5: https://e-commerce.corven.com.ar/products?page=5
+2026-11-11 21:04:24,803 - INFO - Extraídos 30 productos de la página 5
+2026-11-11 21:04:25,304 - INFO - Scrapeando página 6: https://e-commerce.corven.com.ar/products?page=6
+2026-11-11 21:04:28,426 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/6bfb25cef51937be79bc3fea65aee1fc
+2026-11-11 21:05:21,759 - INFO - === INICIANDO SCRAPING DIARIO ===
+2026-11-11 21:05:21,759 - INFO - Iniciando proceso de login...
+2026-11-11 21:05:21,759 - INFO - ====== WebDriver manager ======
+2026-11-11 21:05:25,377 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 21:05:25,777 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 21:05:26,143 - INFO - Driver [C:\Users\Admin\.wdm\drivers\chromedriver\win64\157.0.8103.78\chromedriver-win32/chromedriver.exe] found in cache
+2026-11-11 21:05:37,421 - INFO - === INICIANDO SCRAPING DIARIO ===
+2026-11-11 21:05:37,422 - INFO - Iniciando proceso de login...
+2026-11-11 21:05:37,422 - INFO - ====== WebDriver manager ======
+2026-11-11 21:05:40,664 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 21:05:41,169 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 21:05:41,545 - INFO - Driver [C:\Users\Admin\.wdm\drivers\chromedriver\win64\157.0.8103.78\chromedriver-win32/chromedriver.exe] found in cache
+2026-11-11 21:05:44,804 - INFO - Login exitoso
+2026-11-11 21:05:44,805 - INFO - Detectando última página disponible...
+2026-11-11 21:05:47,826 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/e936f6e3b76d0409b80e9c7757945c94
+2026-11-11 21:06:08,689 - INFO - === INICIANDO SCRAPING DIARIO ===
+2026-11-11 21:06:08,689 - INFO - Iniciando proceso de login...
+2026-11-11 21:06:08,689 - INFO - ====== WebDriver manager ======
+2026-11-11 21:06:11,968 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 21:06:12,352 - INFO - Get LATEST chromedriver version for google-chrome
+2026-11-11 21:06:12,854 - INFO - Driver [C:\Users\Admin\.wdm\drivers\chromedriver\win64\157.0.8103.78\chromedriver-win32/chromedriver.exe] found in cache
+2026-11-11 21:06:16,120 - INFO - Login exitoso
+2026-11-11 21:06:16,120 - INFO - Detectando última página disponible...
+2026-11-11 21:06:19,862 - INFO - Límite de testing activado: solo se procesarán 1 páginas
+2026-11-11 21:06:19,862 - INFO - Última página detectada: 1
+2026-11-11 21:06:19,862 - INFO - Scrapeando página 1: https://e-commerce.corven.com.ar/products?page=1
+2026-11-11 21:06:22,512 - INFO - Extraídos 30 productos de la página 1
+2026-11-11 21:06:23,012 - INFO - Progreso: 1/1 páginas completadas. Total productos: 30
+2026-11-11 21:06:23,013 - INFO - Exportados 30 productos a JSON: productos_corven.json
+2026-11-11 21:06:25,160 - INFO - Guardados/actualizados 30 productos en MongoDB
+2026-11-11 21:06:25,575 - INFO - Reporte generado: {
+  "total_products": 10989,
+  "stock_distribution": {
+    "low": 654,
+    "medium": 126,
+    "available": 5309,
+    "out_of_stock": 4900,
+    "unknown": 0
+  },
+  "last_update": "2026-11-11 23:50:48.881000",
+  "generated_at": "2026-11-11 21:06:25.575037"
+}
+2026-11-11 21:06:25,575 - INFO - === SCRAPING DIARIO COMPLETADO ===
