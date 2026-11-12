@@ -31,7 +31,9 @@ class CorvenScraper:
         self.password = "1234"
         
         # MongoDB setup - CONFIGURADO PARA TU BASE DE DATOS
-        mongodb_uri = "mongodb://lucasbeta101:rp5d8mdX7rxoluQU@ac-v7bahdb-shard-00-00.qxglnnl.mongodb.net:27017,ac-v7bahdb-shard-00-01.qxglnnl.mongodb.net:27017,ac-v7bahdb-shard-00-02.qxglnnl.mongodb.net:27017/autopartes?ssl=true&authSource=admin&retryWrites=true&w=majority"
+        mongodb_uri = os.getenv('MONGODB_URI')
+        if not mongodb_uri:
+            raise ValueError("Falta la variable de entorno MONGODB_URI. Configúrala antes de ejecutar el scraper.")
         self.client = pymongo.MongoClient(mongodb_uri)
         self.db = self.client.autopartes  # Tu base de datos
         self.collection = self.db.products_corven  # Tu nueva colección

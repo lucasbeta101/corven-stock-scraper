@@ -19,7 +19,9 @@ def sync_stock():
     
     try:
         # Conectar a MongoDB
-        mongodb_uri = os.getenv('MONGODB_URI', "mongodb://lucasbeta101:rp5d8mdX7rxoluQU@ac-v7bahdb-shard-00-00.qxglnnl.mongodb.net:27017,ac-v7bahdb-shard-00-01.qxglnnl.mongodb.net:27017,ac-v7bahdb-shard-00-02.qxglnnl.mongodb.net:27017/autopartes?ssl=true&authSource=admin&retryWrites=true&w=majority")
+        mongodb_uri = os.getenv('MONGODB_URI')
+        if not mongodb_uri:
+            raise ValueError("Falta la variable de entorno MONGODB_URI.")
         client = pymongo.MongoClient(mongodb_uri)
         db = client.autopartes
         

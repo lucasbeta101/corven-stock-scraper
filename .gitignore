@@ -1,0 +1,15 @@
+# Entornos locales
+.env
+.env.*
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
+
+# JSON de pruebas locales
+productos_corven.json
